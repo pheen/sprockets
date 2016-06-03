@@ -96,9 +96,6 @@ module Sprockets
   register_preprocessor 'text/css', DirectiveProcessor.new(
     comments: ["//", ["/*", "*/"]]
   )
-  register_preprocessor 'application/javascript', DirectiveProcessor.new(
-    comments: ["//", ["/*", "*/"]] + ["#", ["###", "###"]]
-  )
 
   require 'sprockets/bundle'
   register_bundle_processor 'application/javascript', Bundle
